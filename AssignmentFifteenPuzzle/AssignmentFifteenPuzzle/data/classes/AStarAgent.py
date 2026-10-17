@@ -1,4 +1,6 @@
 from data.classes.FifteenPuzzle import FifteenPuzzle
+import heapq
+
 
 
 class AStarAgent:
@@ -16,8 +18,27 @@ class AStarAgent:
     # FifteenPuzzle.get_squares() 
     # FifteenPuzzle.get_empty_square()
     # FifteenPuzzle.get_neighbors(square: Square) -> list[Square]
+
+    def __init__(self):
+        self.moves = None
+        self.move_index = 0
+
     def choose_action(self, board: FifteenPuzzle) -> bool:
         """Apply one move and return True, or False if no solution is available."""
-        raise NotImplementedError(
-            "A* is not implemented yet. Add the search and move-selection logic here."
-        )
+
+        if self.moves is None:
+            self.moves.find_solution(self.get_state(board))
+
+    def get_state(self, board):
+
+    def heuristic(self, state):
+
+
+    def get_neighbors(self, state):
+
+
+    def find_solution(self, start):
+
+
+    def reconstruct_path(self, came_from, move_used, current):
+        
