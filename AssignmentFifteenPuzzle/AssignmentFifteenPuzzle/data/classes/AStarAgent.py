@@ -79,7 +79,7 @@ class AStarAgent:
 
 
     def find_solution(self, start):
-        goal = tuple(range(1, 16)) + (None, )
+        goal = (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,None)
         if start == goal:
             return []
 
